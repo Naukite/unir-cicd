@@ -1,6 +1,5 @@
 class Calculator:
     def add(self, x, y):
-        this is an offending line written by nau for testing jenkins
         self.check_types(x, y)
         return x + y
 
