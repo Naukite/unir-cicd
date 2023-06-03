@@ -17,6 +17,7 @@ def hello():
 
 @api_application.route("/calc/add/<op_1>/<op_2>", methods=["GET"])
 def add(op_1, op_2):
+    raise Exception("Boom. I wanted to test fauilures...")
     try:
         num_1, num_2 = util.convert_to_number(op_1), util.convert_to_number(op_2)
         return ("{}".format(CALCULATOR.add(num_1, num_2)), http.client.OK, HEADERS)
